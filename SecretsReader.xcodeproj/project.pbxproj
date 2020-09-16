@@ -13,7 +13,23 @@
 		C941DA07251215D800713BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C941DA05251215D800713BD6 /* Main.storyboard */; };
 		C941DA09251215D900713BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C941DA08251215D900713BD6 /* Assets.xcassets */; };
 		C941DA0C251215D900713BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C941DA0A251215D900713BD6 /* LaunchScreen.storyboard */; };
+		C941DA202512181F00713BD6 /* Secrets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C941DA1E2512180200713BD6 /* Secrets.framework */; };
+		C941DA212512181F00713BD6 /* Secrets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C941DA1E2512180200713BD6 /* Secrets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C941DA182512162300713BD6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C941DA212512181F00713BD6 /* Secrets.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C941D9FC251215D800713BD6 /* SecretsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		C941DA08251215D900713BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C941DA0B251215D900713BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C941DA0D251215D900713BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C941DA1E2512180200713BD6 /* Secrets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Secrets.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C941DA202512181F00713BD6 /* Secrets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +74,7 @@
 		C941D9FE251215D800713BD6 /* SecretsReader */ = {
 			isa = PBXGroup;
 			children = (
+				C941DA13251215E200713BD6 /* Frameworks */,
 				C941D9FF251215D800713BD6 /* AppDelegate.swift */,
 				C941DA01251215D800713BD6 /* SceneDelegate.swift */,
 				C941DA03251215D800713BD6 /* ViewController.swift */,
@@ -65,6 +84,14 @@
 				C941DA0D251215D900713BD6 /* Info.plist */,
 			);
 			path = SecretsReader;
+			sourceTree = "<group>";
+		};
+		C941DA13251215E200713BD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C941DA1E2512180200713BD6 /* Secrets.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +104,7 @@
 				C941D9F8251215D800713BD6 /* Sources */,
 				C941D9F9251215D800713BD6 /* Frameworks */,
 				C941D9FA251215D800713BD6 /* Resources */,
+				C941DA182512162300713BD6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +314,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R252PR8AVU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SecretsReader/Frameworks",
+				);
 				INFOPLIST_FILE = SecretsReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,6 +336,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R252PR8AVU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SecretsReader/Frameworks",
+				);
 				INFOPLIST_FILE = SecretsReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
